@@ -54,7 +54,7 @@ final readonly class CustomPageResource
 {
     /**
      * @param array<string, string> $name
-     * @param array<string, string> $description
+     * @param array<string, array<array-key, mixed>|string> $description
      * @param array<string, string> $slug
      * @param array<int, MultimediaResource> $multimedia
      */
@@ -68,5 +68,7 @@ final readonly class CustomPageResource
         public bool $active,
         public ResourceReference $customPageCategory,
         public array $multimedia,
+        public string $createdAt,
+        public string $updatedAt,
     ) {}
 }
